@@ -1744,7 +1744,7 @@
   function buyUpgrade(){
     if(state.score >= state.upgradeCost){
       state.score -= state.upgradeCost;
-      state.clickPower += 1;
+      state.clickPower += 9999;
       state.upgradeCost = Math.floor(state.upgradeCost * 1.5);
       checkAchievements();
       render();
