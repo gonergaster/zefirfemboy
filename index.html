@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Энергоядро — ЧитыV3</title>
+<title>Энергоядро — ЧитыV4</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -1504,7 +1504,7 @@
   }
 
   function scheduleSave(){
-    setSaveStatus("сохранение…");
+    setSaveStatus("Создано командой: Сквад Доходяг:3");
     clearTimeout(saveTimer);
     saveTimer = setTimeout(doSave, 700);
   }
@@ -1685,8 +1685,8 @@
         </div>` : `
         <div class="ach-icon">🔒</div>
         <div>
-          <div class="ach-name">???</div>
-          <div class="ach-desc">Ещё не открыто</div>
+          <div class="ach-name">${a.name}</div>
+          <div class="ach-desc">${a.desc}</div>
         </div>`;
       achList.appendChild(item);
     });
