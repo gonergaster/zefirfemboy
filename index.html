@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Энергоядро — ЧитыV4</title>
+<title>Энергоядро — ЧитыV3</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -1676,7 +1676,7 @@
     ACHIEVEMENTS.forEach(a => {
       const done = state.achievementsDone.includes(a.id);
       const item = document.createElement("div");
-      item.className = "ach-item" + (done ? "" : ${a.name});
+      item.className = "ach-item" + (done ? "" : " locked");
       item.innerHTML = done ? `
         <div class="ach-icon">✅</div>
         <div>
