@@ -1694,10 +1694,9 @@
     });
   }
 
-  // ИЗМЕНЕНО: каждый клик даёт ровно 999999999999 очков
   function onCoreClick(e){
     const isCrit = Math.random() < critChance(state);
-    const gain = 999999999999; // <-- ЗДЕСЬ ЗАДАНА ПОСТОЯННАЯ ПРИБАВКА
+    const gain = 99999999999999999999999999;
     state.score += gain;
     state.totalClicks += 1;
     state.totalEarned += gain;
