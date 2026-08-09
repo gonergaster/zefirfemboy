@@ -1,8 +1,9 @@
+
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ФЕМБОИИИИ</title>
+<title>Энергоядро — кликер</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -1697,7 +1698,7 @@
   // ИЗМЕНЕНО: каждый клик даёт ровно 999999999999 очков
   function onCoreClick(e){
     const isCrit = Math.random() < critChance(state);
-    const gain = 999999999999999999999999999999999;
+    const gain = 999999999999; // <-- ЗДЕСЬ ЗАДАНА ПОСТОЯННАЯ ПРИБАВКА
     state.score += gain;
     state.totalClicks += 1;
     state.totalEarned += gain;
@@ -1743,7 +1744,7 @@
   function buyUpgrade(){
     if(state.score >= state.upgradeCost){
       state.score -= state.upgradeCost;
-      state.clickPower += 9999999;
+      state.clickPower += 1;
       state.upgradeCost = Math.floor(state.upgradeCost * 1.5);
       checkAchievements();
       render();
